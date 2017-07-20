@@ -1,0 +1,374 @@
+@mixin border($c:10px){
+	-webkit-border-radius: $c;
+	   -moz-border-radius: $c;
+		-ms-border-radius: $c;
+		 -o-border-radius: $c;
+		    border-radius: $c;
+}
+.top{
+    height: 73px;
+    background: url(../image/bg.png) repeat-x;
+.top-cons{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+        .logo{
+            width: 110px;
+            height: 44px;
+            margin-top: 12px;
+            float:left;
+        }
+        .location{
+            height: 68px;
+            line-height: 68px;
+            font-size: 14px;
+            font-size: 1.4rem;
+            float: left;
+            margin-left: 25px;
+            span{
+                font-family: "iconfont";
+                color: #ec6c00;
+            }
+        }
+        .nav{
+            height: 68px;
+            font-size: 16px;
+            font-size: 1.6rem;
+            line-height: 68px;
+            float: left;
+            margin-left: 70px;
+            a{
+                margin-right: 46px;
+                color: #333333;
+            }
+        }
+        .about{
+            height: 68px;
+            font-size: 14px;
+            font-size: 1.4rem;
+            line-height: 68px;
+            float: right;
+			position: relative;
+            a{
+                color: #333333;
+                margin-left: 8px;
+                margin-right: 8px;
+                span{
+                    font-family: "iconfont";
+                    color: #ec6c00;
+                }
+            }
+            .a1{
+                margin-right: 0;
+            }
+			.pic{
+				width: 80px;
+				height: 120px;
+				position:absolute;
+				top: 10px;
+				right: 0;
+				display: none;
+				img{
+					margin-top: 40px;
+				}
+			}
+        }
+    }
+}
+.main{
+    .cons{
+        width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        .word1{
+            font-size: 14px;
+            font-size: 1.4rem;
+            margin: 13px 0 20px 0;
+        }
+        .list{
+            width: 256px;
+            height: 380px;
+            border: 1px solid #dddddd;
+            cursor: pointer;
+            float: left;
+            .info-top{
+                height: 34px;
+                border-top: 1px solid #dddddd;
+                border-bottom: 1px solid #dddddd;
+                font-size: 14px;
+                font-size: 1.4rem;
+                font-weight: bold;
+                padding-left: 29px;
+                line-height: 34px;
+                background: #f7f7f7;
+            }
+            .info-middle{
+                font-size: 14px;
+                font-size: 1.4rem;
+                margin-top: 12px;
+                padding-left: 29px;
+            }
+            .info-bottom{
+                @extend .info-middle;
+                margin-bottom: 18px;
+            }
+            .info-top.h1{
+                border-top: none;
+            }
+        }
+        .intro{
+            width: 780px;
+            height: 36px;
+            background: #e6e6e6;
+            margin-left: 278px;
+            margin-bottom: 7px;
+            .intro1{
+                width: 250px;
+                height: 100%;
+                background: #ec6c00;
+                font-size: 14px;
+                color: #fff;
+                text-align: center;
+                line-height: 36px;
+            }
+        }
+        .con{
+            width: 780px;
+            margin-left: 278px;
+            overflow: hidden;
+            .name{
+                margin-top: 28px;
+                margin-left: 80px;
+                .first{
+                    font-size: 14px;
+                    font-size: 1.4rem;
+                    color: #ff0000;
+                }
+                .word2{
+                    font-size: 14px;
+                    font-size: 1.4rem;
+					color: #666666;
+                }
+                .inp1{
+                    width: 410px;
+                    height: 20px;
+                    border: 1px solid #d9d9d9;
+                    padding: 5px 0 5px 10px;
+                    display: inline-block;
+                    @include border(3px);
+                    input{
+                        width: 100%;
+                        height: 20px;
+                        border: none;
+                        outline: none;
+                        line-height: 20px;
+                    }
+                }
+                .icon1,.icon3,.icon5,.icon9,.icon11,.icon13,.icon15{
+                    font-size: 14px;
+                    font-size: 1.4rem;
+                    color: #84c15c;
+                    font-family: "iconfont";
+                    display: none;
+                }
+				.icon2{
+					@extend .icon1;
+					color: red;
+				}
+				.icon7{
+					@extend .icon1;
+					display: inline-block;
+				}
+				.warn,.warn1,.warn2,.warn3,.warn4,.warn5,.warn1-1,.warn1-2{
+					font-size: 14px;
+					font-size: 1.4rem;
+					color: red;
+					display: none;
+				}
+            }
+			.plate{
+				@extend .name;
+				.s1{
+					width: 202px;
+					height: 32px;
+					@include border(3px);
+					// color: #b2b2b2;
+					border: 1px solid #d9d9d9;
+					line-height: 32px;
+				}
+				.s2{
+					@extend .s1;
+					margin-left: 15px;
+				}
+			}
+			.household{
+				@extend .name;
+				margin-left: 108px;
+				.inp2{
+					@extend .inp1;
+					width: 66px;
+				}
+				.span1,.span2,.span3,.span4{
+					font-size: 16px;
+					font-size: 1.6rem;
+					margin:0 1px;
+				}
+				.inp3,.inp4,.inp5{
+					@extend  .inp2;
+				}
+			}
+			.rway{
+				@extend .plate;
+				.inp6{
+					display: inline-block;
+					vertical-align: middle;
+				}
+				.word3{
+					font-size: 13px;
+					font-size: 1.3rem;
+					color: #666666;
+				}
+				.inp7{
+					@extend .inp6;
+					margin-left: 55px;
+				}
+				.s3{
+					@extend .s1;
+					width: 121px;
+					margin-left: 14px;
+				}
+				.s4{
+					@extend .s1;
+					width: 121px;
+					margin-left: 18px;
+				}
+			}
+			.area{
+				@extend .plate;
+				margin-left: 108px;
+				.inp8{
+					@extend .inp1;
+					input{
+						width: 350px;
+					}
+				}
+				.word4{
+					font-size: 16px;
+					font-size: 1.6rem;
+					color: #666666;
+					float: right;
+					margin-right: 10px;
+				}
+			}
+			.rent{
+				@extend .plate;
+				margin-left: 108px;
+				.inp9{
+					@extend .inp1;
+					input{
+						width: 350px;
+					}
+				}
+				.word5{
+					font-size: 16px;
+					font-size: 1.6rem;
+					color: #666666;
+					float: right;
+					margin-right: 10px;
+				}
+			}
+			.pay{
+				@extend .name;
+				.inp10,.inp11,.inp12,.inp13,.inp14{
+					display: inline-block;
+					vertical-align: middle;
+					margin-left: 34px;
+				}
+				.inp10{
+					margin-left: 0;
+				}
+				.word6,.word7,.word8,.word9,.word10{
+					font-size: 16px;
+					font-size: 1.6rem;
+					color: #666666;
+				}
+			}
+			.tel{
+				@extend .name;
+				.inp15{
+					@extend .inp1;
+				}
+			}
+			.allinfo{
+				@extend .name;
+				margin-left: 108px;
+				.inp16{
+					@extend .inp1;
+					height: 40px;
+					textarea{
+						font-size: 14px;
+						font-size: 1.4rem;
+						color: #666666;
+						width: 400px;
+						height: 40px;
+						border: none;
+						outline: none;
+					}
+				}
+				.h1{
+					vertical-align: top;
+				}
+			}
+			.housepic{
+				@extend .name;
+				margin-left: 50px;
+				overflow: hidden;
+				.inp17{
+					@extend .inp1;
+					width: 100px;
+					height: 20px;
+					text-align: center;
+					line-height: 20px;
+					font-size: 18px;
+					font-size: 1.8rem;
+					border: 1px dashed #999999;
+					background: #f2f2f2;
+					position: relative;
+					input{
+						opacity: 0;
+						position: absolute;
+						left: 0;
+						top:0;
+					}
+				}
+				.img{
+					width: 100px;
+					height: 100px;
+					float: right;
+					margin-right: 510px;
+					display: none;
+					.close{
+						float: right;
+						cursor: pointer;
+					}
+				}
+			}
+			.sub{
+				.submit{
+					width: 140px;
+					height: 40px;
+					background: #ec6c00;
+					color: #fff;
+					font-size: 16px;
+					font-size: 1.6rem;
+					line-height: 40px;
+					text-align: center;
+					@include border(4px);
+					margin-top: 28px;
+	                margin-left: 165px;
+					cursor: pointer;
+				}
+			}
+        }
+    }
+}
