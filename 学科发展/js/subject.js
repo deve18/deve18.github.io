@@ -86,7 +86,7 @@ $(function(){
 
 	function map(){
 		var map = new BMap.Map("allmap");
-		var point = new BMap.Point(118.786511,32.029147);
+		var point = new BMap.Point(118.7,32.1);
 			map.centerAndZoom(point, 15);
 		var marker = new BMap.Marker(point);  // 创建标注
 		map.addOverlay(marker);               // 将标注添加到地图中
