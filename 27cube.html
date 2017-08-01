@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: perspective(1200px);
+        }
+        .m{
+            position: fixed;
+            left: 750px;
+            top: 250px;
+            transform-style: preserve-3d;    
+            transform: rotateX(-45deg) rotateY(-45deg);
+        }
+        .m2{
+            transform: rotateX(-45deg) rotateY(-45deg) translateZ(20px)
+        }
+        .m3{
+            transform: rotateX(-45deg) rotateY(-45deg) translateZ(-20px)
+        }
+      
+        .all{
+            width: 20px;
+            height: 20px;           
+            position: relative;  
+            transform-style: preserve-3d;  
+            animation-duration: 3s; 
+			animation-timing-function: ease-out;
+			animation-delay: 0s;
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+        }
+        .one{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .one1{
+            transform: rotate3d(1,0,0,90deg) translateZ(10px);
+            background: blue;
+        }
+        .one2{
+            transform: rotate3d(0,1,0,90deg) translateZ(10px);
+            background: green;
+        }
+        .one3{
+            transform: translateZ(10px);
+            background: red;
+        }
+        .all3,.all12,.all21{
+            transform: translateY(-60px);
+        }
+        .all4,.all13,.all22{
+            transform: translateX(20px) translateY(-80px);
+        }
+        .all5,.all14,.all23{
+            transform: translateX(-20px) translateY(-100px);
+        }
+        .all6,.all15,.all24{
+            transform: translateX(-20px) translateY(-100px);
+        }
+        .all7,.all16,.all25{
+            transform: translateX(20px) translateY(-120px);
+        }
+        .all8,.all17,.all26{
+            transform: translateX(-20px) translateY(-120px); 
+        }
+        .all9,.all18,.all27{
+            transform: translateX(20px) translateY(-140px);
+        }
+        
+        .all2{
+            animation-name: all2;
+        }
+        @keyframes all2 {
+            0%{
+                transform: translateY(0);
+            }
+            16%{
+                transform: translateY(0);
+            }
+            32%{
+                transform: translateY(0);
+            }
+            48%{
+                transform: translateY(20px);
+            }
+            64%{
+                transform: translateY(20px);
+            }
+            80%{
+                transform: translateY(20px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        .all3{
+            animation-name: all3;
+        }
+        @keyframes all3 {
+            0%{
+                transform: translateY(-60px);
+            }
+            16%{
+                transform: translateY(-60px);
+            }
+            32%{
+                transform: translateY(-60px);
+            }
+            48%{
+                transform: translateY(-80px);
+            }
+            64%{
+                transform: translateY(-80px);
+            }
+            80%{
+                transform: translateY(-80px);
+            }
+            100%{
+                transform: translateY(-60px);
+            }
+        }
+        .all4{
+            animation-name: all4;	
+        }
+        @keyframes all4 {
+            0%{
+                transform: translateX(20px) translateY(-80px);
+            }
+            16%{
+                transform: translateX(40px) translateY(-80px);
+            }
+            32%{
+                transform: translateX(40px) translateY(-80px);
+            }
+            48%{
+                transform: translateX(40px) translateY(-100px);
+            }
+            64%{
+                transform: translateX(20px) translateY(-100px);
+            }
+            80%{
+                transform: translateX(20px) translateY(-100px);
+            }
+            100%{
+                transform: translateX(20PX) translateY(-80px);
+            }
+        }
+        .all5{
+            animation-name: all5;
+        }
+        @keyframes all5 {
+            0%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            16%{
+                transform: translateX(-40px) translateY(-100px);
+            }
+            32%{
+                transform: translateX(-40px) translateY(-100px);
+            }
+            48%{
+                transform: translateX(-40px) translateY(-120px);
+            }
+            64%{
+                transform: translateX(-20px) translateY(-120px);
+            }
+            80%{
+                transform: translateX(-20px) translateY(-120px);
+            }
+            100%{
+                transform: translateX(-20PX) translateY(-100px);
+            }
+        }
+        .all6{
+            animation-name: all6;
+        }
+         @keyframes all6 {
+            0%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            16%{
+                transform: translateX(-40px) translateY(-100px);
+            }
+            32%{
+                transform: translateX(-40px) translateY(-100px);
+            }
+            48%{
+                transform: translateX(-40px) translateY(-100px);
+            }
+            64%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            80%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            100%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+        }
+        .all7{
+            animation-name: all7;
+        }
+         @keyframes all7 {
+            0%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            16%{
+                transform: translateX(40px) translateY(-120px);
+            }
+            32%{
+                transform: translateX(40px) translateY(-120px);
+            }
+            48%{
+                transform: translateX(40px) translateY(-120px);
+            }
+            64%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            80%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            100%{
+                transform: translateX(20px) translateY(-120px);
+            }
+        }
+        .all8{
+            animation-name: all8;
+        }
+        @keyframes all8 {
+            0%{
+                transform: translateX(-20px) translateY(-120px);
+            }
+            16%{
+                transform: translateX(-40px) translateY(-120px);
+            }
+            32%{
+                transform: translateX(-40px) translateY(-120px);
+            }
+            48%{
+                transform: translateX(-40px) translateY(-100px);
+            }
+            64%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            80%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            100%{
+                transform: translateX(-20PX) translateY(-120px);
+            }
+        }
+        .all9{
+            animation-name: all9;
+        }
+        @keyframes all9 {
+            0%{
+                transform: translateX(20px) translateY(-140px);
+            }
+            16%{
+                transform: translateX(40px) translateY(-140px);
+            }
+            32%{
+                transform: translateX(40px) translateY(-140px);
+            }
+            48%{
+                transform: translateX(40px) translateY(-120px);
+            }
+            64%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            80%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            100%{
+                transform: translateX(20px) translateY(-140px);
+            }
+        }
+        .all10{
+            animation-name: all10;
+        }
+         @keyframes all10 {
+            0%{
+                transform: translateZ(0);
+            }
+            16%{
+                transform: translateZ(0);
+            }
+            32%{
+                transform: translateZ(20px);
+            }
+            48%{
+                transform: translateZ(20px);
+            }
+            64%{
+                transform: translateZ(20px);
+            }
+            80%{
+                transform: translateZ(0);
+            }
+            100%{
+                transform: translateZ(0);
+            }
+        }
+        .all11{
+            animation-name: all11;	
+        }
+        @keyframes all11 {
+            0%{
+                transform: translate(0);
+            }
+            16%{
+                transform: translate(0);
+            }
+            32%{
+                transform: translateZ(20px);
+            }
+            48%{
+                transform: translateY(20px) translateZ(20px);
+            }
+            64%{
+                transform: translateY(20px) translateZ(20px);
+            }
+            80%{
+                transform: translateY(20PX);
+            }
+            100%{
+                transform: translate(0);
+            }
+        }
+        .all12{
+            animation-name: all12;	
+        }
+        @keyframes all12 {
+            0%{
+                transform: translateY(-60px);
+            }
+            16%{
+                transform: translateY(-60px);
+            }
+            32%{
+                transform: translateY(-60px) translateZ(20px);
+            }
+            48%{
+                transform: translateY(-80px) translateZ(20px);
+            }
+            64%{
+                transform: translateY(-80px) translateZ(20px);
+            }
+            80%{
+                transform: translateY(-80px);
+            }
+            100%{
+                transform: translateY(-60px);
+            }
+        }
+        .all13{
+            animation-name: all13;
+        }
+        @keyframes all13 {
+            0%{
+                transform: translateX(20px) translateY(-80px);
+            }
+            16%{
+                transform: translateX(40px) translateY(-80px);
+            }
+            32%{
+                transform: translateX(40px) translateY(-80px) translateZ(20px);
+            }
+            48%{
+                transform: translateX(40px) translateY(-100px) translateZ(20px);
+            }
+            64%{
+                transform: translateX(20px) translateY(-100px) translateZ(20px);
+            }
+            80%{
+                transform: translateX(20px) translateY(-100px);
+            }
+            100%{
+                transform: translateX(20PX) translateY(-80px);
+            }
+        }
+        .all14{
+            animation-name: all14;
+
+        }
+        @keyframes all14 {
+            0%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            16%{
+                transform: translateX(-40px) translateY(-100px);
+            }
+            32%{
+                transform: translateX(-40px) translateY(-100px) translateZ(20px);
+            }
+            48%{
+                transform: translateX(-40px) translateY(-120px) translateZ(20px);
+            }
+            64%{
+                transform: translateX(-20px) translateY(-120px) translateZ(20px);
+            }
+            80%{
+                transform: translateX(-20px) translateY(-120px);
+            }
+            100%{
+                transform: translateX(-20PX) translateY(-100px);
+            }
+        }
+        .all15{
+            animation-name: all15;
+        }
+        @keyframes all15 {
+            0%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            16%{
+                transform: translateX(-40px) translateY(-100px);
+            }
+            32%{
+                transform: translateX(-40px) translateY(-100px) translateZ(20px);
+            }
+            48%{
+                transform: translateX(-40px) translateY(-100px) translateZ(20px);
+            }
+            64%{
+                transform: translateX(-20px) translateY(-100px) translateZ(20px);
+            }
+            80%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            100%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+        }
+        .all16{
+            animation-name: all16;
+        }
+        @keyframes all16 {
+            0%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            16%{
+                transform: translateX(40px) translateY(-120px);
+            }
+            32%{
+                transform: translateX(40px) translateY(-120px) translateZ(20px);
+            }
+            48%{
+                transform: translateX(40px) translateY(-120px) translateZ(20px);
+            }
+            64%{
+                transform: translateX(20px) translateY(-120px) translateZ(20px);
+            }
+            80%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            100%{
+                transform: translateX(20px) translateY(-120px);
+            }
+        }
+        .all17{
+            animation-name: all17;
+
+        }
+        @keyframes all17 {
+            0%{
+                transform: translateX(-20px) translateY(-120px);
+            }
+            16%{
+                transform: translateX(-40px) translateY(-120px);
+            }
+            32%{
+                transform: translateX(-40px) translateY(-120px) translateZ(20px);
+            }
+            48%{
+                transform: translateX(-40px) translateY(-100px) translateZ(20px);
+            }
+            64%{
+                transform: translateX(-20px) translateY(-100px) translateZ(20px);
+            }
+            80%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            100%{
+                transform: translateX(-20PX) translateY(-120px);
+            }
+        }
+        .all18{
+            animation-name: all18;
+
+        }
+        @keyframes all18 {
+            0%{
+                transform: translateX(20px) translateY(-140px);
+            }
+            16%{
+                transform: translateX(40px) translateY(-140px);
+            }
+            32%{
+                transform: translateX(40px) translateY(-140px) translateZ(20px);
+            }
+            48%{
+                transform: translateX(40px) translateY(-120px) translateZ(20px);
+            }
+            64%{
+                transform: translateX(20px) translateY(-120px) translateZ(20px);
+            }
+            80%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            100%{
+                transform: translateX(20PX) translateY(-140px);
+            }
+        }
+        .all19{
+            animation-name: all19;
+        }
+         @keyframes all19 {
+            0%{
+                transform: translateZ(0);
+            }
+            16%{
+                transform: translateZ(0);
+            }
+            32%{
+                transform: translateZ(-20px);
+            }
+            48%{
+                transform: translateZ(-20px);
+            }
+            64%{
+                transform: translateZ(-20px);
+            }
+            80%{
+                transform: translateZ(0);
+            }
+            100%{
+                transform: translateZ(0);
+            }
+        }
+        .all20{
+            animation-name: all20;	
+        }
+        @keyframes all20 {
+            0%{
+                transform: translateY(0);
+            }
+            16%{
+                transform: translateY(0);
+            }
+            32%{
+                transform: translateY(0) translateZ(-20px);
+            }
+            48%{
+                transform: translateY(20px) translateZ(-20px);
+            }
+            64%{
+                transform: translateY(20px) translateZ(-20px);
+            }
+            80%{
+                transform: translateY(20px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        .all21{
+            animation-name: all21;	
+        }
+        @keyframes all21 {
+            0%{
+                transform: translateY(-60px);
+            }
+            16%{
+                transform: translateY(-60px);
+            }
+            32%{
+                transform: translateY(-60px) translateZ(-20px);
+            }
+            48%{
+                transform: translateY(-80px) translateZ(-20px);
+            }
+            64%{
+                transform: translateY(-80px) translateZ(-20px);
+            }
+            80%{
+                transform: translateY(-80px);
+            }
+            100%{
+                transform: translateY(-60px);
+            }
+        }
+        .all22{
+            animation-name: all22;
+        }
+        @keyframes all22 {
+            0%{
+                transform: translateX(20px) translateY(-80px);
+            }
+            16%{
+                transform: translateX(40px) translateY(-80px);
+            }
+            32%{
+                transform: translateX(40px) translateY(-80px) translateZ(-20px);
+            }
+            48%{
+                transform: translateX(40px) translateY(-100px) translateZ(-20px);
+            }
+            64%{
+                transform: translateX(20px) translateY(-100px) translateZ(-20px);
+            }
+            80%{
+                transform: translateX(20px) translateY(-100px);
+            }
+            100%{
+                transform: translateX(20PX) translateY(-80px);
+            }
+        }
+        .all23{
+            animation-name: all23;
+        }
+        @keyframes all23 {
+            0%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            16%{
+                transform: translateX(-40px) translateY(-100px);
+            }
+            32%{
+                transform: translateX(-40px) translateY(-100px) translateZ(-20px);
+            }
+            48%{
+                transform: translateX(-40px) translateY(-120px) translateZ(-20px);
+            }
+            64%{
+                transform: translateX(-20px) translateY(-120px) translateZ(-20px);
+            }
+            80%{
+                transform: translateX(-20px) translateY(-120px);
+            }
+            100%{
+                transform: translateX(-20PX) translateY(-100px);
+            }
+        }
+        .all24{
+            animation-name: all24;
+        }
+        @keyframes all24 {
+            0%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            16%{
+                transform: translateX(-40px) translateY(-100px);
+            }
+            32%{
+                transform: translateX(-40px) translateY(-100px) translateZ(-20px);
+            }
+            48%{
+                transform: translateX(-40px) translateY(-100px) translateZ(-20px);
+            }
+            64%{
+                transform: translateX(-20px) translateY(-100px) translateZ(-20px);
+            }
+            80%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            100%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+        }
+        .all25{
+            animation-name: all25;
+        }
+        @keyframes all25 {
+            0%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            16%{
+                transform: translateX(40px) translateY(-120px);
+            }
+            32%{
+                transform: translateX(40px) translateY(-120px) translateZ(-20px);
+            }
+            48%{
+                transform: translateX(40px) translateY(-120px) translateZ(-20px);
+            }
+            64%{
+                transform: translateX(20px) translateY(-120px) translateZ(-20px);
+            }
+            80%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            100%{
+                transform: translateX(20px) translateY(-120px);
+            }
+        }
+        .all26{
+            animation-name: all26;
+        }
+        @keyframes all26 {
+            0%{
+                transform: translateX(-20px) translateY(-120px);
+            }
+            16%{
+                transform: translateX(-40px) translateY(-120px);
+            }
+            32%{
+                transform: translateX(-40px) translateY(-120px) translateZ(-20px);
+            }
+            48%{
+                transform: translateX(-40px) translateY(-100px) translateZ(-20px);
+            }
+            64%{
+                transform: translateX(-20px) translateY(-100px) translateZ(-20px);
+            }
+            80%{
+                transform: translateX(-20px) translateY(-100px);
+            }
+            100%{
+                transform: translateX(-20PX) translateY(-120px);
+            }
+        }
+        .all27{
+            animation-name: all27;
+
+        }
+        @keyframes all27 {
+            0%{
+                transform: translateX(20px) translateY(-140px);
+            }
+            16%{
+                transform: translateX(40px) translateY(-140px);
+            }
+            32%{
+                transform: translateX(40px) translateY(-140px) translateZ(-20px);
+            }
+            48%{
+                transform: translateX(40px) translateY(-120px) translateZ(-20px);
+            }
+            64%{
+                transform: translateX(20px) translateY(-120px) translateZ(-20px);
+            }
+            80%{
+                transform: translateX(20px) translateY(-120px);
+            }
+            100%{
+                transform: translateX(20PX) translateY(-140px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="m m1">
+        <div class="all all1">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all2">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all3">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all4">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all5">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all6">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all7">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all8">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all9">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+    </div>
+    <div class="m m2">
+        <div class="all all10">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all11">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all12">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all13">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all14">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all15">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all16">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all17">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all18">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+    </div>
+    <div class="m m3">
+        <div class="all all19">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all20">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all21">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all22">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all23">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all24">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all25">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all26">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+        <div class="all all27">
+            <div class="one one1"></div>
+            <div class="one one2"></div>
+            <div class="one one3"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

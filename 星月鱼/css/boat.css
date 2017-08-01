@@ -1,0 +1,271 @@
+body{
+    background: url("../image/bg.jpg")
+}
+    .cloud-l{
+        width: 147px;
+        height: 400px;
+        background: url("../image/cloud_01.png");
+        position: fixed;
+        top: -200px;
+        left: 220px;
+        z-index: 3;
+        animation-name: cloud01;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    .cloud-m{
+        width: 184px;
+        height: 400px;
+        background: url("../image/cloud_02.png");
+        position: fixed;
+        top: -150px;
+        left: 550px;
+        z-index: 3;
+        animation-name: cloud02;
+        animation-duration: 2.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    .cloud-r{
+        width: 228px;
+        height: 400px;
+        background: url("../image/cloud_03.png");
+        position: fixed;
+        top: -150px;
+        left: 1000px;
+        z-index: 3;
+        animation-name: cloud03;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    .cloud-move{
+        width: 135px;
+        height: 82px;
+        background: url("../image/cloud_04.png");
+        position: fixed;
+        top: 180px;
+        left: 0px;
+        z-index: 2;
+        animation-name: cloud04;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes cloud01 {
+        0%{
+            top: -200px;
+        }
+        100%{
+            top:-250px;
+        }
+    }
+    @keyframes cloud02 {
+        0%{
+            top: -250px;
+        }
+        100%{
+            top:-150px;
+        }
+    }
+    @keyframes cloud03 {
+        0%{
+            top: -150px;
+        }
+        100%{
+            top:-200px;
+        }
+    }
+    @keyframes cloud04 {
+        0%{
+            left: 0;
+        }
+        100%{
+            left:1400px;
+        }
+    }
+    .wave-01{
+        width: 100%;
+        height: 325px;
+        background: url("../image/wave_01.png");
+        position: fixed;
+        left: 0;
+        bottom: -150px;
+        z-index: 10;
+        animation-name: wave-01;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    .wave-02{
+        width: 100%;
+        height: 563px;
+        background: url("../image/wave_02.png");
+        position: fixed;
+        left: 0;
+        bottom: -300px;
+        z-index: 7;
+        animation-name: wave-02;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    .wave-03{
+        width: 100%;
+        height: 730px;
+        background: url("../image/wave_03.png");
+        position: fixed;
+        left: 0;
+        bottom: -480px;
+        z-index: 3;
+        animation-name: wave-03;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes wave-01 {
+        0%{
+            bottom: -180px;
+        }
+        100%{
+            bottom:-150px;
+        }
+    }
+    @keyframes wave-02 {
+        0%{
+            bottom: -300px;
+        }
+        100%{
+            bottom: -330px;
+        }
+    }
+    @keyframes wave-03 {
+        0%{
+            bottom: -480px;
+        }
+        100%{
+            bottom:-450px;
+        }
+    }
+    .moon{
+        width: 150px;
+        height: 174px;
+        background: url("../image/moon.png");
+        position: fixed;
+        top: 100px;
+        left: 320px;
+        transform: rotate3d(0,0,1,-20deg);
+        animation-name: moon;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes moon {
+        0%{
+            transform: rotate3d(0,0,1,-30deg);
+        }
+        100%{
+            transform: rotate3d(0,0,1,-10deg);
+        }
+    }
+    .fish-01{
+        width: 235px;
+        height: 94px;
+        background: url("../image/fish_01.png");
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: 5;
+        transform: rotate3d(0,0,1,0deg);
+        animation-name: fish-01;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+    }
+    .fish-02{
+        width: 228px;
+        height: 139px;
+        background: url("../image/fish_02.png");
+        position: fixed;
+        left: 0px;
+        bottom: 0;
+        z-index: 8;
+        transform: rotate3d(0,0,1,0deg);
+        animation-name: fish-02;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+    }
+    @keyframes fish-01 {
+        0%{
+            transform: translate(600px,0px) rotate3d(0,0,1,20deg);
+        }
+        40%{
+            transform: translate(350px,-300px) rotate3d(0,0,1,-30deg);
+        }
+        60%{
+            transform: translate(0px,0px) rotate3d(0,0,1,-80deg);
+        }
+        100%{
+            transform: translate(0px,200px) rotate3d(0,0,1,-90deg);
+        }
+    }
+    @keyframes fish-02 {
+        0%{
+            transform: translate(400px,0px) rotate3d(0,0,1,0deg);
+        }
+        30%{
+            transform: translate(300px,-150px) rotate3d(0,0,1,-30deg);
+        }
+        60%{
+            transform: translate(0px,150px) rotate3d(0,0,1,-90deg);
+        }
+        100%{
+            transform: translate(400px,300px) rotate3d(0,0,1,-120deg);
+        }
+    }
+    .ship{
+        width: 412px;
+        height: 409px;
+        background: url("../image/ship.png");
+        position: fixed;
+        right: 300px;
+        bottom: 80px;
+        z-index: 5;
+        animation-name: ship;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes ship {
+        0%{
+            transform: rotate3d(0,0,1,-30deg);
+        }
+        100%{
+            transform: rotate3d(0,0,1,0deg);
+        }
+    }
+    p{
+        width: 600px;
+        font-family: "Georgia", Tahoma, Sans-Serif;
+        font-size: 20px;
+        color: #fff;
+        text-shadow: 3px 3px 3px #000;
+        position: fixed;
+        right: 100px;
+        bottom: 100px;
+        z-index: 11;
+    }

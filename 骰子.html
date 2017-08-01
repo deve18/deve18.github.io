@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: perspective(1200px);
+        }
+        .code{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 300px auto;
+            transform-style: preserve-3d;
+            animation-name: test;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+        .face{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            /*transform: rotate3d(1,0,0,20deg);*/
+        }
+            .f1{
+                transform: translateZ(50px);
+                background: rgba(238, 69, 15, 0.7)
+            }
+            .f2{
+                transform: translateZ(-50px);
+                background: rgba(6, 247, 95, 0.7)
+            }
+            .f3{
+                transform: rotate3d(1,0,0,90deg) translateZ(50px);
+                background: rgba(60, 13, 245, 0.7)
+            }
+            .f4{
+                transform: rotate3d(1,0,0,90deg) translateZ(-50px);
+                background: rgba(15, 198, 238, 0.7)
+            }
+            .f5{
+                transform: rotate3d(0,1,0,90deg) translateZ(50px);
+                background: rgba(15, 238, 58, 0.7)
+            }
+            .f6{
+                transform: rotate3d(0,1,0,90deg) translateZ(-50px);
+                background: rgba(247, 195, 9, 0.7)
+            }
+            @keyframes test {
+                0%{
+                    transform: rotate3d(0,0,0,0deg);
+                }
+                30%{
+                    transform: rotate3d(1,0,1,120deg);
+                }
+                60%{
+                    transform: rotate3d(1,1,0,200deg);
+                }
+                100%{
+                    transform: rotate3d(0,1,1,360deg);
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="code">
+        <div class="f1 face">1</div>
+        <div class="f2 face">2</div>
+        <div class="f3 face">3</div>
+        <div class="f4 face">4</div>
+        <div class="f5 face">5</div>
+        <div class="f6 face">6</div>
+    </div>
+</body>
+</html>
