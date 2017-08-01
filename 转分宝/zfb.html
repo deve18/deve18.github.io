@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>转分宝手机端UI</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+<!--   搜索框-->
+    <div class="head">
+        <div class="search">
+            <div class="mag">
+                <span class="icon">&#xe634;</span>
+            </div>
+            <div class="txt">
+                <input type="text" placeholder="搜索商品">
+            </div>
+        </div>
+    </div>
+<!--    PPT-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/ppt.jpg" width="100%" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/ppt.jpg" width="100%" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/ppt.jpg" width="100%" alt="">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+        });
+    </script>
+<!--    菜单-->
+    <div class="menu">
+        <a href=""><div class="memctr">
+            <div class="crown">&#xe636;</div>
+            <span>会员中心</span>
+        </div></a>
+        <a href=""><div class="fees">
+            <div class="thun">&#xe680;</div>
+            <span>生活缴费</span>
+        </div></a>
+        <a href=""><div class="exch">
+            <div class="coin">&#xe6f2;</div>
+            <span>积分兑换</span>
+        </div></a>
+        <a href=""><div class="clas">
+            <div class="kind">&#xe6e3;</div>
+            <span>商品分类</span>
+        </div></a>
+    </div>
+<!--    节日礼品-->
+    <div class="gifts">——&nbsp;&nbsp;节日礼物&nbsp;&nbsp;——</div>
+    <div class="blocks">
+        <div class="blc1"> 
+            <div class="con1">
+                <p class="tit1"><b>年节福利</b></p>
+                <p class="tit2">质出品质 造出口碑</p>
+            </div> 
+            <div class="pic1">
+                <img src="images/gifts.png" height="100%" alt="">
+            </div> 
+        </div>
+        <div class="blc2">
+            <div class="con2">
+                <p>南京特产</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/duck.jpg" width="100%" alt="">
+            </div>
+        </div>
+        <div class="blc3">
+            <div class="con2">
+                <p>菌菇礼盒</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/mushroom.jpg" width="100%" alt="">
+            </div>
+        </div>
+        <div class="blc-b">
+            <div class="blc-bl">
+                <div class="bl-l">
+                    <div class="con3">
+                        <p>五谷杂粮</p>
+                        <p class="tit-b">质出品质 造出口碑</p>
+                        <div class="pic3">
+                            <img src="images/rice.png" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="bl-r">
+                    <div class="con3">
+                        <p>时令海鲜</p>
+                        <p class="tit-b">质出品质 造出口碑</p>
+                        <div class="pic3">
+                            <img src="images/seafood.png" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blc-br">
+                <div class="br-l">
+                    <div class="con3">
+                        <p>礼盒卡券</p>
+                        <p class="tit-b">质出品质 造出口碑</p>
+                        <div class="pic3">
+                            <img src="images/box.png" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="br-r">
+                    <div class="con3">
+                        <p>食品礼包</p>
+                        <p class="tit-b">质出品质 造出口碑</p>
+                        <div class="pic3">
+                            <img src="images/foodbox.png" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    虚拟卡券-->
+    <div class="tickets">——&nbsp;&nbsp;虚拟卡券&nbsp;&nbsp;——</div>
+    <div class="blocks">
+        <div class="blc1">  
+            <div class="con1">
+                <p class="tit3"><b>会员卡券</b></p>
+                <p class="tit2">质出品质 造出口碑</p>
+            </div> 
+            <div class="pic1">
+                <br>
+                <img src="images/amazon.png" height="80%" alt="">
+            </div> 
+        </div>
+        <div class="blc2">
+            <div class="con2">
+                <p>爱奇艺会员</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/iqiyi.jpg" width="100%" alt="">
+            </div>
+        </div>
+        <div class="blc3">
+            <div class="con2">
+                <p>优酷会员</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/youku.jpg" width="95%" alt="">
+            </div>
+        </div>
+        <div class="blc4">
+            <div class="blc4-l">
+                <div class="con2">
+                    <p>京东E卡</p>
+                    <p class="tit-p">质出品质 造出口碑</p>
+                </div>
+                <div class="pic2">
+                    <img src="images/JD.jpg" width="95%" alt="">
+                </div>
+            </div>
+            <div class="blc4-r">
+                <div class="con2">
+                    <p>唯品会卡</p>
+                    <p class="tit-p">质出品质 造出口碑</p>
+                </div>
+                <div class="pic2">
+                    <img src="images/vip.jpg" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="blc4">
+            <div class="blc4-l">
+                <div class="con2">
+                    <p>亚马逊卡</p>
+                    <p class="tit-p">质出品质 造出口碑</p>
+                </div>
+                <div class="pic2">
+                    <img src="images/amazon.jpg" width="95%" alt="">
+                </div>
+            </div>
+            <div class="blc4-r">
+                <div class="con2">
+                    <p>天猫银泰卡</p>
+                    <p class="tit-p">质出品质 造出口碑</p>
+                </div>
+                <div class="pic2">
+                    <img src="images/tmall.jpg" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    旅游推荐-->
+    <div class="trip">——&nbsp;&nbsp;旅游推荐&nbsp;&nbsp;——</div>
+    <div class="blocks">
+        <div class="blc1">
+            <div class="con1">
+                <p class="tit4"><b>畅玩世界</b></p>
+                <p class="tit2">质出品质 造出口碑</p>
+            </div> 
+            <div class="pic1 pic-r">
+                <img src="images/airballoon.png" height="100%" alt="">
+            </div>    
+        </div>
+        <div class="blc2">
+            <div class="con2">
+                <p>携程任我行</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/ctrip.jpg" width="100%" alt="">
+            </div>
+        </div>
+        <div class="blc3">
+            <div class="con2">
+                <p>携程任我游</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/ctrip-blue.jpg" width="100%" alt="">
+            </div>
+        </div>
+    </div>
+<!--    潮品推荐-->
+    <div class="fashion">——&nbsp;&nbsp;潮品推荐&nbsp;&nbsp;——</div>
+    <div class="blocks">
+        <div class="blc1"> 
+            <div class="con1">
+                <p class="tit5"><b>潮流新品</b></p>
+                <p class="tit2">质出品质 造出口碑</p>
+            </div> 
+            <div class="pic1">
+                <br><br>
+                <img src="images/cook.png" height="80%" alt="">
+            </div>  
+        </div>
+        <div class="blc2">
+            <div class="con2">
+                <p>双立人锅具</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/zwilling.png" width="100%" alt="">
+            </div>
+        </div>
+        <div class="blc3">
+            <div class="con2">
+                <p>飞利浦剃须刀</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2 pic-pub">
+                <img src="images/phil.png" width="70%" alt="">
+            </div>
+        </div>
+        <div class="blc-b">
+            <div class="blc-bl">
+                <div class="bl-l">
+                    <div class="con3">
+                        <p>折叠桌椅</p>
+                        <p class="tit-b">质出品质 造出口碑</p>
+                        <div class="pic3">
+                            <img src="images/tables.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="bl-r">
+                    <div class="con3">
+                        <p>南极人暖手宝</p>
+                        <p class="tit-b">质出品质 造出口碑</p>
+                        <div class="pic3">
+                            <img src="images/rice.png" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blc-br">
+                <div class="br-l">
+                    <div class="con3">
+                        <p>象印保温杯</p>
+                        <p class="tit-b">质出品质 造出口碑</p>
+                        <div class="pic3">
+                            <img src="images/cup.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="br-r">
+                    <div class="con3">
+                        <p>智能手环</p>
+                        <p class="tit-b">质出品质 造出口碑</p>
+                        <div class="pic3">
+                            <img src="images/watch.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    体检健身-->
+    <div class="body">——&nbsp;&nbsp;体检健身&nbsp;&nbsp;——</div>  
+    <div class="blocks">
+        <div class="blc1"> 
+            <div class="con1">
+                <p class="tit6"><b>健康生活</b></p>
+                <p class="tit2">质出品质 造出口碑</p>
+            </div> 
+            <div class="pic1">
+                <img src="images/gym.png" height="100%" alt="">
+            </div>   
+        </div>
+        <div class="blc2">
+            <div class="con2">
+                <p>青年体检</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/youth.jpg" width="90%" alt="">
+            </div>
+        </div>
+        <div class="blc3">
+            <div class="con2">
+                <p>老人体检</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/old.jpg" width="90%" alt="">
+            </div>
+        </div>
+        <div class="blc4">
+            <div class="blc4-l">
+                <div class="con2">
+                    <p>健身月卡</p>
+                    <p class="tit-p">质出品质 造出口碑</p>
+                </div>
+                <div class="pic2 pic-btm">
+                    <img src="images/monthly.jpg" width="100%" alt="">
+                </div>
+            </div>
+            <div class="blc4-r">
+                <div class="con2">
+                    <p>健身年卡</p>
+                    <p class="tit-p">质出品质 造出口碑</p>
+                </div>
+                <div class="pic2 pic-btm">
+                    <img src="images/year.jpg" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    培训教育-->
+    <div class="edu">——&nbsp;&nbsp;培训教育&nbsp;&nbsp;——</div>   
+    <div class="blocks">
+        <div class="blc1"> 
+            <div class="con1">
+                <p class="tit7"><b>特色教育</b></p>
+                <p class="tit2">质出品质 造出口碑</p>
+            </div> 
+            <div class="pic1 pic-r">
+                <img src="images/children.png" height="100%" alt="">
+            </div>   
+        </div>
+        <div class="blc2">
+            <div class="con2">
+                <p>金融管理</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/jrmage.jpg" width="100%" alt="">
+            </div>
+        </div>
+        <div class="blc3">
+            <div class="con2">
+                <p>本科英语</p>
+                <p class="tit-p">质出品质 造出口碑</p>
+            </div>
+            <div class="pic2">
+                <img src="images/english.jpg" width="100%" alt="">
+            </div>
+        </div>
+        <div class="blc4">
+            <div class="blc4-l btm">
+                <div class="con2">
+                    <p>硕研考试</p>
+                    <p class="tit-p">质出品质 造出口碑</p>
+                </div>
+                <div class="pic2">
+                    <img src="images/xuexin.png" width="90%" alt="">
+                </div>
+            </div>
+            <div class="blc4-r btm">
+                <div class="con2">
+                    <p>早教体验</p>
+                    <p class="tit-p">质出品质 造出口碑</p>
+                </div>
+                <div class="pic2">
+                    <img src="images/earlyedu.png" width="90%" alt="">
+                </div>
+            </div>
+        </div>
+    </div> 
+<!--    底部导航-->
+    <div class="navi">
+        <div class="navi-s h">
+            <p class="icon1">&#xe612;</p>
+            <p class="icon-tit">首页</p>
+        </div>
+        <div class="navi-s">
+            <p class="icon1 i1">&#xe6e3;</p>
+            <p class="icon-tit">分类</p>
+        </div>
+        <div class="navi-s">
+            <p class="icon1 i1">&#xe63f;</p>
+            <p class="icon-tit">购物车</p>
+        </div>
+        <div class="navi-s">
+            <p class="icon1 i2">&#xe619;</p>
+            <p class="icon-tit">我的</p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script>
+    $(function(){
+        $(".navi-s").on({"click":function(){
+            $(this).addClass("h").siblings(".navi-s").removeClass("h")
+            }}
+        )
+    })
+</script>
